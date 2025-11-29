@@ -40,4 +40,19 @@ public class StudentManager {
     public int getStudentCount() {
         return students.size();
     }
+    // 在学生管理类中添加搜索功能
+    public void searchStudent(String keyword) {
+        System.out.println("=== 搜索结果 ===");
+        boolean found = false;
+        for (Student student : students) {
+            if (student.getName().contains(keyword) ||
+                    student.getStudentId().contains(keyword)) {
+                System.out.println("找到: " + student);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("未找到匹配的学生");
+        }
+    }
 }

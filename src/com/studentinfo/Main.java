@@ -38,9 +38,16 @@ public class Main {
                     System.out.println("谢谢使用！");
                     scanner.close();
                     return;
+                case "4":
+                    System.out.print("输入搜索关键词: ");
+                    String keyword = scanner.nextLine();
+                    manager.searchStudent(keyword);
+                    break;
 
                 default:
                     System.out.println("请输入1-3的数字！");
+                    // 在菜单中添加第4个选项
+                    System.out.println("4. 搜索学生");
             }
         }
     }
